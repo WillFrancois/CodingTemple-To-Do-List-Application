@@ -29,6 +29,8 @@ def delete_task(task_number):
 
 #Validates user input for cases 3 and 4 in the main menu
 def validate_task_number(function):
+    if len(todo_list) == 0:
+        return
     try:
         task_number = int(input("Please provide the task number you would like to delete: "))
         function(task_number)
